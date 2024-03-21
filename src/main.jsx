@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import BrowserRouter from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 const Home = () => {
-  return <h1>Routing</h1>;
+  return <h1>Home Page</h1>;
+}
+
+const About = () => {
+  return <h1>About page</h1>;
+}
+
+const Profile = () => {
+  return <h1>Profile page</h1>;
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -12,6 +20,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path='account'>
+          <Route path='/profile' element = {<Profile/>}/>
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
