@@ -11,7 +11,7 @@ const About = () => {
   return <h1>About page</h1>;
 }
 
-const Profile = () => {
+const Profil = () => {
   return <h1>Profile page</h1>;
 }
 
@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="account">
-          <Route path="/profile" element = {<Profile/>}/>
+          <Route path="/profile" element = {<Profil/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
